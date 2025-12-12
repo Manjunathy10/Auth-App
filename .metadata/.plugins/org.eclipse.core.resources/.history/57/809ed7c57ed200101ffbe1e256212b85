@@ -1,0 +1,5 @@
+package com.substring.auth.repository;
+
+public interface RefreshTokenRepository {
+
+}

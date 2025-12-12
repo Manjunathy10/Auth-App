@@ -1,0 +1,36 @@
+# Development version of configuration
+
+# server:
+#   port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/auth_app
+    username: root
+    # password: RootPass@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+security:
+  jwt:
+    secret: ${JWT_SECRET:secreatekey:saiofal;vkasfbehwqpofhjashofjaswfpojasfvbafop[hfifonfo]shjfwfejifsla}
+    issuer: ${JWT_ISSUER:api.substring.com}
+    access-ttl-seconds: ${JWT_ACCESS_TTL_SECONDS:3600}
+    refresh-ttl-seconds: ${JWT_REFRESH_TTL_SECONDS:86400}
+    refresh-token-cookie-name: ${JWT_REFRESH_COOKIE_NAME:refreshToken}
+    cookie-secure: ${JWT_COOKIE_SECURE:true}
+    cookie-http-only: ${JWT_COOKIE_HTTP_ONLY:true}
+    cookie-same-site: ${JWT_COOKIE_SAME_SITE:lax}
+		cookie-domain: ${JWT_COOKIE_DOMAIN:.substring.com}

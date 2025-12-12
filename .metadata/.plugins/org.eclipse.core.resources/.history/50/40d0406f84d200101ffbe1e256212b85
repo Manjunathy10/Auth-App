@@ -1,0 +1,15 @@
+package com.substring.auth.security;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class CookieService {
+
+	private final String refreshTokenCookieName;
+	private final boolean cookieHttpOnly;
+	private final boolean cookieSecure;
+//	private final boolean cokieMazAge;
+	
+	private final String cookieDomain;
+	private final String cookieSameSite;
+}

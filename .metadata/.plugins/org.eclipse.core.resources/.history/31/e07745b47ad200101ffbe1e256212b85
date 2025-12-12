@@ -1,0 +1,5 @@
+package com.substring.auth.entity;
+
+public class RefreshToken {
+
+}

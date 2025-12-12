@@ -1,0 +1,11 @@
+package com.substring.auth.dtos;
+
+public record TokenResponse(
+
+		String acessToken, String refreshTokenString, Long exprisIn, String tokenType, UserDto userDto
+
+) {
+
+	public static public TokenResponse of(String acessToken, String refreshTokenString, Long exprisIn, String tokenType, UserDto userDto)
+    return new TokenResponse(acessToken, refreshTokenString, exprisIn, tokenType, userDto);
+}

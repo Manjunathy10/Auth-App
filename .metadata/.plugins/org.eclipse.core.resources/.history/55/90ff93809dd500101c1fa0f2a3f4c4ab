@@ -1,0 +1,5 @@
+package com.substring.auth.config;
+
+public class APIDocConfig {
+
+}

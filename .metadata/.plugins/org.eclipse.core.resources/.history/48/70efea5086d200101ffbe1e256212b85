@@ -1,0 +1,32 @@
+package com.substring.auth.security;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+
+@Service
+public class CookieService {
+
+	private final String refreshTokenCookieName;
+	private final boolean cookieHttpOnly;
+	private final boolean cookieSecure;
+//	private final boolean cokieMazAge;
+
+	private final String cookieDomain;
+	private final String cookieSameSite;
+
+	public CookieService(@Value("${security.jwt.refresh-token-cookie-name}") String refreshTokenCookieName,
+			@Value("${security.jwt.cookie-http-only}") boolean cookieHttpOnly,
+			@Value("${security.jwt.cookie-secure}") boolean cookieSecure,
+			@Value("${security.jwt.cookie-domain}") String cookieDomain,
+			@Value("${security.jwt.cookie-same-site}") String cookieSameSite) {
+		super();
+		this.refreshTokenCookieName = refreshTokenCookieName;
+		this.cookieHttpOnly = cookieHttpOnly;
+		this.cookieSecure = cookieSecure;
+		this.cookieDomain = cookieDomain;
+		this.cookieSameSite = cookieSameSite;
+	}
+
+	// create a method to attach cookie to response
+
+}
